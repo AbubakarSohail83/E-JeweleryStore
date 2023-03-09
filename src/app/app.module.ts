@@ -8,15 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ForgetPasswordComponent } from './authentication/forget-password/forget-password.component';
+import { AuthDashboardComponent } from './authentication/auth-dashboard/auth-dashboard.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent,
     NavbarComponent,
-    ForgetPasswordComponent],
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,

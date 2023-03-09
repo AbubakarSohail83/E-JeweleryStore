@@ -5,6 +5,7 @@ import { LoginComponent } from './authentication/login/login.component';
 import { ForgetPasswordComponent } from './authentication/forget-password/forget-password.component';
 
 const routes: Routes = [
+<<<<<<< HEAD
   { path: '',  redirectTo: 'home',  pathMatch: 'full'},
 
   {path:'' ,
@@ -17,6 +18,9 @@ const routes: Routes = [
        path: 'forgetPassword', component: ForgetPasswordComponent 
     }
   ]},
+=======
+  {path:'login',component:LoginComponent},
+>>>>>>> parent of 32d6477 (Added Lazy Loading feature in authentication)
   {path:'home',component:HomeComponent }
 ];
 

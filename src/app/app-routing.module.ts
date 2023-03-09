@@ -4,7 +4,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './authentication/login/login.component';
 
 const routes: Routes = [
-<<<<<<< HEAD
   { path: '',  redirectTo: 'home',  pathMatch: 'full'},
 
   {path:'' ,
@@ -14,9 +13,6 @@ const routes: Routes = [
       loadChildren: () => import('./authentication/authentication/authentication.module').then(m => m.AuthenticationModule),
     },
   ]},
-=======
-  {path:'login',component:LoginComponent},
->>>>>>> parent of 32d6477 (Added Lazy Loading feature in authentication)
   {path:'home',component:HomeComponent }
 ];
 

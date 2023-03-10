@@ -16,8 +16,8 @@ import { SignupComponent } from './authentication/signup/signup.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent,
-    SignupComponent,
+    NavbarComponent
+    ,
    ],
   imports: [
     BrowserModule,

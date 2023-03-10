@@ -13,8 +13,15 @@
         <label for="confirmPassword">Confirm Password</label><br>
         <input class="form-control-lg" type="password" required="true"><br><br> 
 
+       <div class="d-flex">
         <label for="submit"></label><br>
         <input class="form-control-lg btn btn-secondary" type="submit" required="true"><br><br>
+
+        <div class="container ms-20">
+            <p>Already have an account?</p>
+            <a class="cursor text-info" (click)="onNavigateTo(1)">Login</a>
+        </div>
+       </div>
 
     </form>
 </div>

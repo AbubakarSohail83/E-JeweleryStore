@@ -17,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes)],   //intializing the routers and starts it, listening to browser location changes, also making the router module be available for routing module
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

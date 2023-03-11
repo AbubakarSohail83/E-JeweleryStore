@@ -1,3 +1,11 @@
-<p *ngFor="let item of items">
-    <app-item-comp [item]="item"></app-item-comp>
-</p>
+
+<div class="container text-muted">
+    <div class="row">
+        <div *ngFor="let item of items; let i = index;">  
+            <p>
+                {{title}}
+            </p>
+            <app-item-comp [item]="item" [itemPic]="itemPics[i]" (notify)="onNotified($event)"></app-item-comp>
+        </div>
+    </div>
+</div>

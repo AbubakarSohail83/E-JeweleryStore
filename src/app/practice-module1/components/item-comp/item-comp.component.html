@@ -1,1 +1,14 @@
-<p>{{item}}</p>                          //property binding
+
+        <div class="col-md-6 col-lg-3">
+            <div class="card">
+                <img class="card-img-top" src="{{itemPic}}">
+
+                <div class="card-block" (click)="onClicked()">                     <!----whenever any of the card will be clicked on go to this function-->
+                    <h3 class="card-title">{{item}}</h3>
+                    <p>this is a test item and this is a description for it</p>
+
+                </div>
+                
+            </div>
+        </div>
+

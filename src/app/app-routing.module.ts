@@ -12,6 +12,10 @@ const routes: Routes = [
       path: 'auth',
       loadChildren: () => import('./authentication/authentication/authentication.module').then(m => m.AuthenticationModule),
     },
+    {
+      path: 'pm1',
+      loadChildren: () => import('./practice-module1/practice-module1.module').then(m => m.PracticeModule1Module),
+    }
   ]},
   {path:'home',component:HomeComponent }
 ];

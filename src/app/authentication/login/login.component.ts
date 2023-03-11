@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,24 +9,30 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-constructor(public _router:Router)
-{
+  constructor(public _router:Router)
+  {
+    
+  }
 
-}
-
+  // ngOnInit() {
+  //   this.route.queryParams.subscribe(params => {
+  //     this.email = params['email'];
+  //     console.log(this.email);
+  //   });
+  // }
 
   onnaviagteto(id:number)
-{
-  if(id==1){
-    this._router.navigateByUrl('/auth/forgetPassword')
+  {
+    if(id==1){
+      this._router.navigateByUrl('/auth/forgetPassword')
+
+    }
+    else{
+      this._router.navigateByUrl('/auth/signup')
+
+    }
 
   }
-  else{
-    this._router.navigateByUrl('/auth/signup')
-
-  }
-
-}
 }
 
 

@@ -1,16 +1,19 @@
-<div class="container-fluid justify-content-center">
+<div style="margin: 5%;">
+
+<div class="container-fluid justify-content-center text-align-center">
     <h1 class=".text-center">Login Form</h1><br>
-    <form class="form-group border">
+    <form class="form-group ">
         <label for ="Email" ></label><br>
         <input name="Email" class="form-control-lg" placeholder="name@example.com" required="true" type="email"/><br><br>
 
         <label for="Password">Password</label><br>
         <input name="Password" class="form-control-lg"  required="true" type="password"/><br><br>
         <div class="d-flex mb-3">
-        <a class="cursor text-muted mx-5" aria-current="page" (click)="onnaviagteto(1)"  >Forget Password</a>
-        <a class="cursor  text-info" aria-current="page" (click)="onnaviagteto(2)"  >Signup</a>
+        <a class="cursor text-muted " aria-current="page" (click)="onnaviagteto(1)"  >Forget Password</a>
+        <a class="cursor ms-5 text-info" aria-current="page" (click)="onnaviagteto(2)"  >Signup</a>
 </div>
 
         <button type="submit" id="submitbtn" class="btn btn-secondary">Submit</button>
     </form>
+</div>
 </div>

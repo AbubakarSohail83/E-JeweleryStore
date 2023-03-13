@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AuthenticationRoutingModule } from './authentication-routing.module';
+ import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { AuthDashboardComponent } from '../auth-dashboard/auth-dashboard.component';
 
 
@@ -9,7 +8,8 @@ import { AuthDashboardComponent } from '../auth-dashboard/auth-dashboard.compone
   declarations: [AuthDashboardComponent],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
+    
   ]
 })
 export class AuthenticationModule { 

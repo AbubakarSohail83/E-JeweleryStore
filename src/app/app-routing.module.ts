@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './authentication/login/login.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '',  redirectTo: 'home',  pathMatch: 'full'},
@@ -17,7 +18,10 @@ const routes: Routes = [
       loadChildren: () => import('./practice-module1/practice-module1.module').then(m => m.PracticeModule1Module),
     }
   ]},
-  {path:'home',component:HomeComponent }
+  {path:'home',component:HomeComponent },
+
+  {path:'**',component:PageNotFoundComponent }
+
 ];
 
 @NgModule({

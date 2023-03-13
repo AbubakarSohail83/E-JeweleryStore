@@ -10,13 +10,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ForgetPasswordComponent } from './authentication/forget-password/forget-password.component';
 import { AuthDashboardComponent } from './authentication/auth-dashboard/auth-dashboard.component';
 import { SignupComponent } from './authentication/signup/signup.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    PageNotFoundComponent
     ,
    ],
   imports: [

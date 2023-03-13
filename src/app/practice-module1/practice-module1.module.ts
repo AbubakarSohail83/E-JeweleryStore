@@ -5,13 +5,15 @@ import { PracticeModule1RoutingModule } from './practice-module1-routing.module'
 import { ShowListOfItemsComponent } from './components/show-list-of-items/show-list-of-items.component';
 import { Pm1DashboardComponent } from './components/pm1-dashboard/pm1-dashboard.component';
 import { ItemCompComponent } from './components/item-comp/item-comp.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
 
 
 @NgModule({
   declarations: [
     ShowListOfItemsComponent,
     Pm1DashboardComponent,
-    ItemCompComponent
+    ItemCompComponent,
+    ItemDetailsComponent
   ],
   imports: [
     CommonModule,

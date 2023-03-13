@@ -17,6 +17,6 @@ export class ItemCompComponent implements OnInit {
 
   onClicked()      //whenever an item is pressed this functionwill be invoked
   {
-    this.notify.emit(this.item+ "was clicked");
+    this.notify.emit(this.item);
   }
 }

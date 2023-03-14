@@ -6,10 +6,9 @@ import { ShowListOfItemsComponent } from './components/show-list-of-items/show-l
 
 const routes: Routes = [
   { path: '',  redirectTo: 'showItems',  pathMatch: 'full'},
-  
+  {path:'items/:id',component:ItemDetailsComponent},
   {path:'',component:Pm1DashboardComponent},
   {path:'showItems',component:ShowListOfItemsComponent}, 
-  {path:'itemDetails/ :id',component:ItemDetailsComponent }
 
 ];
 

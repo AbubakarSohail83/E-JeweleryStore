@@ -1,0 +1,9 @@
+div.card:hover{
+    transform:translateY(10px);
+}
+*{
+    text-align: center;
+}
+.card{
+    border:groove 10px slategrey;
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 class Item {
   name : String;
@@ -28,9 +29,13 @@ export class ShowListOfItemsComponent {
     new Item("Ring",234,"GoldPlated"),new Item("Necklace",333,"GoldPlated"),new Item("Ruby",10000,"Stones"), new Item("Zircon",23,"Stones"), new Item("Pearl",10101010,"Stones")
   ];
   
-  
+  constructor(private router: Router){
 
-  
+  }
+
+  ngOnInit()
+  {
+  }
 
   ItemCategoryClicked(category:string)
   {
@@ -40,7 +45,8 @@ export class ShowListOfItemsComponent {
       if(this.items[i].category==category)
         itemsToShow.push(this.items[i]);
     }
-    console.log(itemsToShow);
+    let itemsString=JSON.stringify(itemsToShow);
+    this.router.navigate(['/pm1/items',itemsString ]);  //
   }
 
 

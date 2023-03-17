@@ -11,6 +11,7 @@ import { ForgetPasswordComponent } from './authentication/forget-password/forget
 import { AuthDashboardComponent } from './authentication/auth-dashboard/auth-dashboard.component';
 import { SignupComponent } from './authentication/signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+     HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

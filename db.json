@@ -1,0 +1,13 @@
+{
+    "Item": [
+        {"name" :"Ring" ,"price" :  234,"category" : "GoldPlated"},
+        {"name":"Necklace","price":333, "category":"GoldPlated"},
+        {"name":"Ruby","price":10000,"category":"Stones"},
+         {"name":"Zircon","price":23,"category":"Stones"},
+        {"name":"Pearl","price":10101010,"category":"Stones"},
+        {"name":"necklace","price":1005656,"category":"Artificial"}
+    ,    {"name":"ring","price":10330,"category":"Artificial"}
+    ,    {"name":"tiara","price":1010,"category":"Artificial"}
+    ]
+
+  }

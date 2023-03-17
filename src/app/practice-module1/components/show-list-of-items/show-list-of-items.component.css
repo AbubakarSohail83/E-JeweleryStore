@@ -5,5 +5,5 @@ div.card:hover{
     text-align: center;
 }
 .card{
-    border:groove 10px slategrey;
+    border:groove 3px rgb(248, 243, 166);
 }

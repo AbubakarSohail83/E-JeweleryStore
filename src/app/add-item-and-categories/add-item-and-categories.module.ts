@@ -5,7 +5,7 @@ import { AddItemAndCategoriesRoutingModule } from './add-item-and-categories-rou
 import { AddItemComponent } from './components/add-item/add-item.component';
 import { AddCategoryComponent } from './components/add-category/add-category.component';
 import { AddItemCategoryDashboardComponent } from './components/add-item-category-dashboard/add-item-category-dashboard.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +15,8 @@ import { AddItemCategoryDashboardComponent } from './components/add-item-categor
   ],
   imports: [
     CommonModule,
-    AddItemAndCategoriesRoutingModule
+    AddItemAndCategoriesRoutingModule,
+    FormsModule
   ]
 })
 export class AddItemAndCategoriesModule { }

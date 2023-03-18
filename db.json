@@ -1,13 +1,72 @@
 {
-    "Item": [
-        {"name" :"Ring" ,"price" :  234,"category" : "GoldPlated"},
-        {"name":"Necklace","price":333, "category":"GoldPlated"},
-        {"name":"Ruby","price":10000,"category":"Stones"},
-         {"name":"Zircon","price":23,"category":"Stones"},
-        {"name":"Pearl","price":10101010,"category":"Stones"},
-        {"name":"necklace","price":1005656,"category":"Artificial"}
-    ,    {"name":"ring","price":10330,"category":"Artificial"}
-    ,    {"name":"tiara","price":1010,"category":"Artificial"}
-    ]
-
-  }
+  "Item": [
+    {
+      "name": "Ring",
+      "price": 234,
+      "category": "GoldPlated"
+    },
+    {
+      "name": "Necklace",
+      "price": 333,
+      "category": "GoldPlated"
+    },
+    {
+      "name": "Ruby",
+      "price": 10000,
+      "category": "Stones"
+    },
+    {
+      "name": "Zircon",
+      "price": 23,
+      "category": "Stones"
+    },
+    {
+      "name": "Pearl",
+      "price": 10101010,
+      "category": "Stones"
+    },
+    {
+      "name": "necklace",
+      "price": 1005656,
+      "category": "Artificial"
+    },
+    {
+      "name": "ring",
+      "price": 10330,
+      "category": "Artificial"
+    },
+    {
+      "name": "tiara",
+      "price": 1010,
+      "category": "Artificial"
+    }
+  ],
+  "Category": [
+    {
+        "categoryName": "Artificial",
+        "createdOn": "2023-03-18T06:40:39.195Z",
+        "id": 3
+      },
+      {
+        "categoryName": "Stones",
+        "createdOn": "2023-03-18T06:40:57.642Z",
+        "id": 4
+      },
+      {
+        "categoryName": "GoldPlated",
+        "createdOn": "2023-03-18T06:41:14.097Z",
+        "id": 5
+      },
+    {
+      "categoryName": "This is Abc Category",
+      "createdOn": "2023-03-18T06:19:16.587Z",
+      "id": 1
+    },
+    {
+      "categoryName": "This is a test Categ",
+      "createdOn": "2023-03-18T06:30:56.970Z",
+      "id": 2
+    }
+    
+  ]
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Category } from 'src/app/models/Category';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 import { SharedService } from 'src/app/services/shared.service';
 
@@ -24,7 +25,7 @@ class Item {
   styleUrls: ['./show-list-of-items.component.css']
 })
 export class ShowListOfItemsComponent {
-  itemCategories=["Stones","GoldPlated","Artificial"];
+  itemCategories:Array<Category>;
   itemCategoryPics=["assets/pictures/download (1).jpeg","assets/pictures/download (2).jpeg","assets/pictures/download.jpeg"];
   title:string;
 
@@ -35,6 +36,7 @@ export class ShowListOfItemsComponent {
   ngOnInit()
   {
     this.getItems();
+    this.getCategories();
   }
 
   getItems(){
@@ -43,14 +45,25 @@ export class ShowListOfItemsComponent {
       this._sharedservice.items=x;
     })}
 
-  ItemCategoryClicked(category:string)
+    getCategories(){
+      this.http.getCategories().subscribe(x =>{
+        console.log(x);
+        this._sharedservice.categories=x;
+      })}
+
+  ItemCategoryClicked(category:Category)
   {
-    let itemsToShow:Item[]=[];
-    for(let i=0;i<this._sharedservice.items.length;i++)
-    {
-      if(this._sharedservice.items[i].category==category)
-        itemsToShow.push(this._sharedservice.items[i]);
-    }
+    let itemsToShow:Array<Item>=[];
+    this._sharedservice.items.forEach(x =>{
+      if(x.category == category.categoryName)
+        {itemsToShow.push(x);}
+
+    })
+    // for(let i=0;i<this._sharedservice.items.length;i++)
+    // {
+    //   if(this._sharedservice.items[i].category==category)
+    //     itemsToShow.push(this._sharedservice.items[i]);
+    // }
     let itemsString=JSON.stringify(itemsToShow);
     this.router.navigate(['/pm1/items',itemsString ]);  //
   }

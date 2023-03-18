@@ -12,21 +12,23 @@ import { AuthDashboardComponent } from './authentication/auth-dashboard/auth-das
 import { SignupComponent } from './authentication/signup/signup.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-
+import { AddItemAndCategoriesModule } from './add-item-and-categories/add-item-and-categories.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NavbarComponent,
-    PageNotFoundComponent
-    ,
+    PageNotFoundComponent,
+
    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
      HttpClientModule,
+     FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

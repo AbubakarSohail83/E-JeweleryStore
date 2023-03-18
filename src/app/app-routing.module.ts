@@ -18,7 +18,7 @@ const routes: Routes = [
       loadChildren: () => import('./practice-module1/practice-module1.module').then(m => m.PracticeModule1Module),
     },
     {
-      path: 'addItems&Categories',
+      path: 'addCategory',
       loadChildren: () => import('./add-item-and-categories/add-item-and-categories.module').then(m => m.AddItemAndCategoriesModule),
     }
   ]},

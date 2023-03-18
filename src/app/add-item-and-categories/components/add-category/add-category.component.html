@@ -1,1 +1,11 @@
-<p>add-category works!</p>
+<div class="container">
+    <h1>Add Category</h1>
+    <form #categoryForm="ngForm" (ngSubmit)="saveCategory()">
+        <div class="form -group">
+        <label>Category Name(20 characters max): </label>
+        <input type="text" maxlength="20" name="CategoryName" [(ngModel)]="addCategory.categoryName" class="form-control" ngModel> 
+       </div>
+      
+       <button class="btn-primary" type="submit" >Submit</button>
+    </form>
+</div>

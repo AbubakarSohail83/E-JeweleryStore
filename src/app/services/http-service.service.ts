@@ -33,4 +33,18 @@ export class HttpServiceService {
     const url = 'http://localhost:3000/Category';
     return this.http.get<any>(url);
   }
+
+  putCategories(category:Category): Observable<any> {
+    const url = 'http://localhost:3000/Category';
+
+    const _url = `${url}/${category.id}`;
+    return this.http.put<any>(_url,category);
+  }
+
+  deleteCategory(category:Category):Observable<any>
+  {
+    const url='http://localhost:3000/Category/';
+    
+    return this.http.delete<any>(url+category.id);
+  }
 }

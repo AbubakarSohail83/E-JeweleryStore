@@ -6,10 +6,9 @@ import { AddItemCategoryDashboardComponent } from './components/add-item-categor
 import { AddItemComponent } from './components/add-item/add-item.component';
 
 const routes: Routes = [
-  {path:'',redirectTo:"addCategory",pathMatch:'full'},
-  {path:'addCategory',component:AddCategoryComponent},
-
-
+  {path:'',redirectTo:"category",pathMatch:'full'},
+  {path:'category',component:AddCategoryComponent},
+  {path:'item',component:AddItemComponent}
 
 ];
 

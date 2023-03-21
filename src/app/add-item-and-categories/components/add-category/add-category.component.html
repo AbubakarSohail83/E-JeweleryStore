@@ -1,11 +1,42 @@
 <div class="container">
     <h1>Add Category</h1>
-    <form #categoryForm="ngForm" (ngSubmit)="saveCategory()">
+    <form #categoryForm="ngForm"  (ngSubmit)="categoryForm.valid ? ( addCategory.id == undefined ?  saveCategory(): onUpdateCategory()) : checkValidation()">
         <div class="form -group">
-        <label>Category Name(20 characters max): </label>
-        <input type="text" maxlength="20" name="CategoryName" [(ngModel)]="addCategory.categoryName" class="form-control" ngModel> 
+        <label>Category Name(20 characters max): {{addCategory.id}} </label>
+        <input type="text" maxlength="20" minlength="5" [ngClass]="addCategory.categoryName == undefined ? 'error':''" required name="CategoryName" [(ngModel)]="addCategory.categoryName" class="form-control" ngModel> 
        </div>
       
-       <button class="btn-primary" type="submit" >Submit</button>
+       <button class="btn-primary" type="submit" >{{addCategory.id == undefined ? 'Submit':'Update'}} </button>
     </form>
+
 </div>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Created On</th>
+            <th>Time</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of _sharedservice.categories">
+            <td>
+                {{category.categoryName}}
+            </td>
+            <td>
+                {{category.createdOn | date: 'dd-LLLL-YYYY'}}
+            </td>
+            <td>
+                {{category.createdOn | date: 'hh:mm  a'}}
+            </td>
+            <td style="color:blue; font-size: smaller;">
+                <a>View|</a>
+                <a (click)="updateCategory(category)">Update|</a>
+                <a (click)="deleteCategory(category)">Delete|</a>
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>

@@ -14,6 +14,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AddItemAndCategoriesModule } from './add-item-and-categories/add-item-and-categories.module';
 import { FormsModule } from '@angular/forms';
+import { UpdateCategoryComponent } from './src/app/add-item-and-categories/components/update-category/update-category.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     NavbarComponent,
     PageNotFoundComponent,
+    UpdateCategoryComponent,
 
    ],
   imports: [

@@ -52,17 +52,19 @@ export class AddCategoryComponent {
     this.addCategory
     this._httpService.deleteCategory(category).subscribe(x=>{
       alert("Delete Method Worked!");
-     this._sharedservice.categories.splice(category.id,1);
+      let idx=this._sharedservice.categories.findIndex(x=>x.id==category.id);
+      this._sharedservice.categories.splice(idx,1);
     });
 
   }
 
 
-  onUpdateCategory(){debugger
+  onUpdateCategory(){
     console.log(this.addCategory.id);
     this._httpService.putCategories(this.addCategory).subscribe(x=>{
      alert("Put Method Worked!");
       var idx=this._sharedservice.categories.findIndex(x=>x.id==this.addCategory.id);
+
       this._sharedservice.categories[idx]=this.addCategory;
     });
   }

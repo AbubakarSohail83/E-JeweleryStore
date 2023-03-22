@@ -1,0 +1,24 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    margin:10%;
+    width: 50%;
+  }
+  
+  td, th {
+    border: 1px solid #220e0e;
+    text-align: center;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f6f6f6;
+  }
+
+  a{
+    color: cornflowerblue;
+  }
+
+  .error{
+    border:solid 2px red;
+  }

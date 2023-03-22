@@ -6,7 +6,8 @@ import { AddItemComponent } from './components/add-item/add-item.component';
 import { AddCategoryComponent } from './components/add-category/add-category.component';
 import { AddItemCategoryDashboardComponent } from './components/add-item-category-dashboard/add-item-category-dashboard.component';
 import { FormsModule } from '@angular/forms';
-import { NgSelectOption } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgSelectOption } from '@angular/forms';
   imports: [
     CommonModule,
     AddItemAndCategoriesRoutingModule,
-    FormsModule
+    FormsModule,
+
   ]
 })
 export class AddItemAndCategoriesModule { }

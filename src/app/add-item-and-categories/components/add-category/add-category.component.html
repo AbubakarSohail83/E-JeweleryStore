@@ -30,8 +30,8 @@
             <td>
                 {{category.createdOn | date: 'hh:mm  a'}}
             </td>
-            <td style="color:blue; font-size: smaller;">
-                <a>View|</a>
+            <td class="cursor" style="color:blue; font-size: smaller;">
+             
                 <a (click)="updateCategory(category)">Update|</a>
                 <a (click)="deleteCategory(category)">Delete|</a>
             </td>

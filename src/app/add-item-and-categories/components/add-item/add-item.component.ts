@@ -19,17 +19,70 @@ export class AddItemComponent {
 
   ngOnInit()
   {
-      this._httpService.getCategories().subscribe(x =>{
-      this._sharedService.categories=x;
-    });
+    this.item=new Item();
+    this.getCategories();
+    this.getItems();
+  }
+  getCategories(){
+    this._httpService.getCategories().subscribe(x =>{   
+    this._sharedService.categories=x;
+    })
   }
 
-onSubmit()
+  getItems()
+  {
+    this._httpService.getItems().subscribe(x=>{
+      this._sharedService.items=x;
+    })
+  }
+onSave()
+{
+  console.log(this.item.category);
+  this._httpService.addItem(this.item).subscribe(x=>{
+    this.getItems();
+    alert("Item added successfully");
+  })
+}
+// onCategorySelect(event:Event){
+//   const selectedValue = (event.target as HTMLSelectElement).value;
+//   this.item.category=selectedValue;
+// }
+
+ViewItem(item:Item)
 {
 
 }
-onCategorySelect(categorySelected:any){
-this.item.category=categorySelected;
+
+UpdateItem(item:Item)
+{
+  this.item=item;
 }
+
+DeleteItem(item:Item)
+{
+  this._httpService.deleteItem(item.id).subscribe(
+    x=>{
+      let idx=this._sharedService.items.findIndex(x=>x.id==item.id);
+      this._sharedService.items.splice(idx,1);
+      
+      alert("Item Deleteed Successfully");
+      
+    }
+  )
+}
+onUpdateItem()
+{
+  this._httpService.putItem(this.item).subscribe(x=>{
+    alert("Item Updated Successfully.");
+    var idx=this._sharedService.items.findIndex(x=>x.id==this.item.id);
+    this._sharedService.items[idx]=this.item;
+  })
+}
+
+checkValidation()
+{
+  alert("Item Credentials are not valid!!");
+}
+
 
 }

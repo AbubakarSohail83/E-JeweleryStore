@@ -24,14 +24,16 @@ export class HttpServiceService {
     return this.http.post<any>(url,category);
   }
   
-   getItem(): Observable<any> {
-    const url = 'http://localhost:3000/Item';
-    return this.http.get<any>(url);
-  }
+  
 
   getCategories(): Observable<any> {
     const url = 'http://localhost:3000/Category';
     return this.http.get<any>(url);
+  }
+  getItems():Observable<any>{
+    const url='http://localhost:3000/Item';
+    return this.http.get<any>(url);
+
   }
 
   putCategories(category:Category): Observable<any> {
@@ -41,10 +43,24 @@ export class HttpServiceService {
     return this.http.put<any>(_url,category);
   }
 
+  putItem(item:Item):Observable<any>{
+    const url = 'http://localhost:3000/Item';
+    const _url = `${url}/${item.id}`;
+    return this.http.put<any>(_url,item);
+  }
+
+
+
   deleteCategory(category:Category):Observable<any>
   {
     const url='http://localhost:3000/Category/';
     
     return this.http.delete<any>(url+category.id);
+  }
+
+  deleteItem(itemId:number)
+  {
+    const url='http://localhost:3000/Item/';
+    return this.http.delete<any>(url+itemId);
   }
 }

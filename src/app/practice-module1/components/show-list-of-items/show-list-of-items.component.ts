@@ -40,7 +40,7 @@ export class ShowListOfItemsComponent {
   }
 
   getItems(){
-    this.http.getItem().subscribe(x =>{
+    this.http.getItems().subscribe(x =>{
       console.log(x);
       this._sharedservice.items=x;
     })}

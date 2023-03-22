@@ -1,44 +1,34 @@
 {
   "Item": [
     {
-      "name": "Ring",
-      "price": 234,
+      "name": "asd",
+      "price": 345,
+      "id": 1,
       "category": "GoldPlated"
     },
     {
-      "name": "Necklace",
-      "price": 333,
-      "category": "GoldPlated"
-    },
-    {
-      "name": "Ruby",
-      "price": 10000,
+      "name": "test Item",
+      "price": 541134643216571400000,
+      "id": 2,
       "category": "Stones"
     },
     {
-      "name": "Zircon",
-      "price": 23,
-      "category": "Stones"
+      "name": "test Item",
+      "price": 541134643216571400000,
+      "category": "Artificial",
+      "id": 3
     },
     {
-      "name": "Pearl",
-      "price": 10101010,
-      "category": "Stones"
+      "name": "test Item",
+      "price": 65,
+      "category": "Artificial",
+      "id": 4
     },
     {
-      "name": "necklace",
-      "price": 1005656,
-      "category": "Artificial"
-    },
-    {
-      "name": "ring",
-      "price": 10330,
-      "category": "Artificial"
-    },
-    {
-      "name": "tiara",
-      "price": 1010,
-      "category": "Artificial"
+      "name": "test",
+      "price": 65,
+      "category": "Artificial",
+      "id": 5
     }
   ],
   "Category": [

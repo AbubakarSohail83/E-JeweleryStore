@@ -5,11 +5,15 @@
     <form #itemForm="ngForm"  (ngSubmit)= " itemForm.valid ? item.id == undefined ?  onSave(): onUpdateItem() : checkValidation()" >
         <div class="form -group">
         <label>Item Name(20 characters max): </label>
-        <input type="text" value={{item.name}} maxlength="20" required name="itemName" [(ngModel)]="item.name" class="form-control"   [ngClass]="item.name==undefined?'error':''">
+        <input type="text" value={{item.name}} maxlength="20" #name="ngModel" required name="itemName" [(ngModel)]="item.name" class="form-control"
+        [class.is-invalid]="name.touched && name.invalid"
+        >
+        <small [class.d-none]="name.valid || name.untouched" style="color:red; font-style: italic;">Name is required!!</small>
         <br><br>
        <label>Item Price(20 digits max): </label>
-        <input type="number" value={{item.price}}  min="0" required  name="itemPrice" [(ngModel)]="item.price" class="form-control"   [ngClass]="(item.price<0)?'error':''">
-
+        <input type="number" value={{item.price}} #price="ngModel" min="0" required  name="itemPrice" [(ngModel)]="item.price" class="form-control"  
+         [class.is-invalid]="price.touched && price.invalid">
+         <small [class.d-none]="price.valid || price.untouched" style="color:red; font-style: italic;">Price is required and must be greater than zero!</small>
         <br><br>
 
         <label>Select Category</label><br><br>

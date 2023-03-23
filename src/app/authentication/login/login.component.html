@@ -1,19 +1,19 @@
-<div style="margin: 5%;">
+<div    style="width: 50%;" class="d-flex border border-2 border-secondary rounded  justify-content-center align-items-center mx-auto mt-5 pb-3 pt-3 parent">
+    <div   class="container pt-5 p-3 text-center">
+        <h1 class="text-center">Login Here</h1><br>
+        <form class="form-group justify-content-center align-items-center">
+            <label for ="Email"  style="text-align:left;">Email</label><br>
+            <input name="Email" class="inputField"  placeholder="Email" required="true" type="email"/>
 
-<div class="container-fluid justify-content-center text-align-center">
-    <h1 class=".text-center">Login Form</h1><br>
-    <form class="form-group ">
-        <label for ="Email" ></label><br>
-        <input name="Email" class="form-control-lg" placeholder="name@example.com" required="true" type="email"/><br><br>
-
-        <label for="Password">Password</label><br>
-        <input name="Password" class="form-control-lg"  required="true" type="password"/><br><br>
-        <div class="d-flex mb-3">
-        <a class="cursor text-muted " aria-current="page" (click)="onnaviagteto(1)"  >Forget Password</a>
-        <a class="cursor ms-5 text-info" aria-current="page" (click)="onnaviagteto(2)"  >Signup</a>
-</div>
-
-        <button type="submit" id="submitbtn" class="btn btn-secondary">Submit</button>
-    </form>
-</div>
+            <label for="Password">Password</label><br>
+            <input name="Password" class="inputField" placeholder="Password" required="true" type="password"/>
+          
+            <button type="submit" id="submitbtn" class="btn btn-submit btn-secondary" style="width:100%">Submit</button>
+            <div class="d-flex mt-3 justify-content-center text-center">
+                <button  class="btn me-3 " (click)="onnaviagteto(1)"  >Forget Password</button>
+                <button class="btn " (click)="onnaviagteto(2)"  >Signup</button>
+            </div>
+    
+        </form>
+    </div>
 </div>

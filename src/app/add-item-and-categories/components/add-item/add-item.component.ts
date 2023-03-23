@@ -84,5 +84,8 @@ checkValidation()
   alert("Item Credentials are not valid!!");
 }
 
+trackByItems(index:number,item:Item):number{return item.id;}
+
+
 
 }

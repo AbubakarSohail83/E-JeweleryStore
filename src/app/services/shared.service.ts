@@ -12,5 +12,6 @@ export class SharedService {
   items: Array<Item>;
   categories: Array<Category>;
   currUser:User;
+  users:Array<User>;
   constructor() { }
 }

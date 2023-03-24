@@ -72,7 +72,7 @@ export class HttpServiceService {
     return this.http.post<any>(url,user);
   }
 
-  getUser(user:User): Observable<any> {
+  getUser(): Observable<any> {
     const url = 'http://localhost:3000/Users';
     return this.http.get<any>(url);
   }

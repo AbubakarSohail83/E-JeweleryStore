@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5" style="color:white;">
     <h1>Item Info</h1>
     <br><br>
 
@@ -18,13 +18,14 @@
 
         <label>Select Category</label><br><br>
 
-       <select name="category" value={{item.category}} [(ngModel)]="item.category" required class="form-control" [ngClass]="(item.category==undefined)?'error':''">
+       <select name="category" #category="ngModel" value={{item.category}} [(ngModel)]="item.category"  required class="form-control" [class.is-invalid]="category.touched && category.invalid">
 
         <option *ngFor="let cat of _sharedService.categories" [value]="cat.categoryName">
             {{cat.categoryName}}
         </option>
        </select>
-       <br><br>  <br>
+       <small [class.d-none]="category.valid || category.untouched" style="color:red; font-style: italic;">You must select a category!</small>
+       <br>
 
        </div>
        <button class="btn-primary" type="submit" >{{item.id==undefined?'Submit':'Update'}} </button>
@@ -32,7 +33,7 @@
 
 
 
-<table class="mt-1" style="width: max-content; align-self: center; align-items: center; text-align: center; ">
+<table class="mt-1 table-responsive mx-auto" style="width: max-content; align-self: center; align-items: center; text-align: center; ">
     <thead>
         <tr>
             <th>Item Id</th>

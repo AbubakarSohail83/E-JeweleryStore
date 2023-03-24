@@ -1,5 +1,54 @@
 {
-  "Item": [],
+  "Item": [
+    {
+      "name": "lklk",
+      "price": 211,
+      "category": "Stones",
+      "id": 1
+    },
+    {
+      "name": "Test item",
+      "price": 545485,
+      "category": "Artificial",
+      "id": 2
+    },
+    {
+      "name": "test Item",
+      "price": 545485656565,
+      "category": "GoldPlated",
+      "id": 3
+    },
+    {
+      "category": "Artificial",
+      "price": 22121,
+      "name": "gdf",
+      "id": 4
+    },
+    {
+      "name": "this is another test",
+      "price": 2312102121,
+      "category": "GoldPlated",
+      "id": 5
+    },
+    {
+      "name": "this is another test",
+      "price": 2312102121,
+      "category": "GoldPlated",
+      "id": 6
+    },
+    {
+      "name": "this is another test",
+      "price": 2312102121,
+      "category": "GoldPlated",
+      "id": 7
+    },
+    {
+      "name": "this is another test",
+      "price": 2312102121,
+      "category": "GoldPlated",
+      "id": 8
+    }
+  ],
   "Category": [
     {
       "categoryName": "Stones",
@@ -15,9 +64,21 @@
       "categoryName": "Artificial",
       "createdOn": "2023-03-20T16:19:41.247Z",
       "id": 17
+    },
+    {
+      "categoryName": "This is Abc Category",
+      "createdOn": "2023-03-24T09:29:04.552Z",
+      "id": 18
     }
   ],
   "Users": [
-   
+    {
+      "name": "xyz",
+      "id": 1
+    },
+    {
+      "name": "xyz",
+      "id": 2
+    }
   ]
 }

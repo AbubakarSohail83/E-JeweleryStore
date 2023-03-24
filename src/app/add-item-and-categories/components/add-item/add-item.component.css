@@ -1,24 +1,29 @@
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    margin:10%;
-    width: 50%;
-  }
-  
-  td, th {
-    border: 1px solid #220e0e;
-    text-align: center;
-    padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f6f6f6;
-  }
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin:10%;
+  width: 50%;
 
-  a{
-    color: cornflowerblue;
-  }
+  background-color: rgba(169, 169, 169, 0.638);
+  color:white;
 
-  .error{
-    border:solid 2px red;
-  }
+}
+
+td, th {
+  border: 1px solid #220e0e;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+  color:black;
+}
+
+
+.error{
+  border:solid 2px red;
+}
+
+
+

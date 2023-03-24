@@ -5,8 +5,10 @@
 
 .card{
     border:groove 4px rgb(248, 244, 225);
-    
+    background-color: rgba(128, 128, 128, 0.466);
+    color: white;
 }
+
 
 
 h1{

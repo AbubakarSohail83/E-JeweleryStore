@@ -1,16 +1,16 @@
-<div class="container">
+<div class="container mt-5" style="color:white">
     <h1>Add Category</h1>
     <form #categoryForm="ngForm"  (ngSubmit)="categoryForm.valid ? ( addCategory.id == undefined ?  saveCategory(): onUpdateCategory()) : checkValidation()">
         <div class="form -group">
         <label>Category Name(20 characters max): {{addCategory.id}} </label>
-        <input type="text" maxlength="20" minlength="5" [ngClass]="addCategory.categoryName == undefined ? 'error':''" required name="CategoryName" [(ngModel)]="addCategory.categoryName" class="form-control" ngModel> 
+        <input type="text" maxlength="20" minlength="5" #categoryName="ngModel" required name="CategoryName" [(ngModel)]="addCategory.categoryName" class="form-control" [class.is-invalid]="categoryName.touched && categoryName.invalid"> 
        </div>
       
-       <button class="btn-primary" type="submit" >{{addCategory.id == undefined ? 'Submit':'Update'}} </button>
+       <button class="btn-primary mt-3" type="submit" >{{addCategory.id == undefined ? 'Submit':'Update'}} </button>
     </form>
 
 </div>
-<table>
+<table class="table-responsive mx-auto">
     <thead>
         <tr>
             <th>Name</th>

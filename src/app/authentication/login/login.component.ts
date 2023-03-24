@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { findIndex } from 'rxjs';
 import { User } from 'src/app/models/User';
 import { HttpServiceService } from 'src/app/services/http-service.service';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,7 @@ export class LoginComponent {
 
   user:User;
 
-  constructor(public _router:Router, private _httpService:HttpServiceService)
+  constructor(public _router:Router, private _httpService:HttpServiceService, public _sharedService:SharedService)
   {
     
   }
@@ -23,11 +25,18 @@ export class LoginComponent {
   };
     
 
-
+  getUsers()
+  {
+    this._httpService.getUser().subscribe(x=>{
+      this._sharedService.users=x;
+    })
+  }
 
   onLogin()
   {
-
+    this._sharedService.users.findIndex(x=>{
+      x.email==this.user.email;
+    })
   }
 
   onnaviagteto(id:number)

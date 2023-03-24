@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Item } from '../models/Item';
 import { Category } from '../models/Category';
+import { User } from '../models/User';
 
 @Injectable({
   providedIn: 'root'
@@ -62,5 +63,23 @@ export class HttpServiceService {
   {
     const url='http://localhost:3000/Item/';
     return this.http.delete<any>(url+itemId);
+  }
+
+
+  addUser(user:User):Observable<any>
+  {
+    const url='http://localhost:3000/Users/';  
+    return this.http.post<any>(url,user);
+  }
+
+  getUser(user:User): Observable<any> {
+    const url = 'http://localhost:3000/Users';
+    return this.http.get<any>(url);
+  }
+
+  putUser(user:User):Observable<any>{
+    const url = 'http://localhost:3000/Users';
+    const _url = `${url}/${user.id}`;
+    return this.http.put<any>(_url,user);
   }
 }

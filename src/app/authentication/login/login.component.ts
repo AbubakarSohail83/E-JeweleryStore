@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { User } from 'src/app/models/User';
+import { HttpServiceService } from 'src/app/services/http-service.service';
 
 @Component({
   selector: 'app-login',
@@ -9,17 +11,24 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class LoginComponent {
 
-  constructor(public _router:Router)
+  user:User;
+
+  constructor(public _router:Router, private _httpService:HttpServiceService)
   {
     
   }
 
-  // ngOnInit() {
-  //   this.route.queryParams.subscribe(params => {
-  //     this.email = params['email'];
-  //     console.log(this.email);
-  //   });
-  // }
+  ngOnInit() {
+    this.user=new User();  
+  };
+    
+
+
+
+  onLogin()
+  {
+
+  }
 
   onnaviagteto(id:number)
   {

@@ -23,11 +23,15 @@
         </ul>
         <ul class="navbar-nav  mb-2 mb-lg-0 d-flex" >
           <li class="nav-item">
-            <a class="nav-link" [class.d-none]="userLoggedIn" routerLink="/auth/login">Login</a>
+            <a class="nav-link" [class.d-none]="userLoggedIn" routerLink="/auth/login" (click)="login()">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/auth/signup">Signup</a>
+            <a class="nav-link" [class.d-none]="!userLoggedIn" routerLink="/auth/login" (click)="logout()">LogOut</a>
           </li>
+          <li class="nav-item" [class.d-none]="userLoggedIn">
+            <a class="nav-link" routerLink="/auth/signup" (click)="login()">Signup</a>
+          </li>
+
         </ul>
       </div>
     </div>

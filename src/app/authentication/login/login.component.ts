@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ActivatedRoute, ParamMap } from '@angular/router';
+import { toString } from '@ng-bootstrap/ng-bootstrap/util/util';
 import { findIndex } from 'rxjs';
 import { User } from 'src/app/models/User';
 import { HttpServiceService } from 'src/app/services/http-service.service';
@@ -45,8 +46,10 @@ export class LoginComponent {
       alert("Invalid Email or Password!");
     }
     else{
-      localStorage.clear();
-      localStorage.setItem(this._sharedService.users[index].email,this._sharedService.users[index].password);
+      
+      localStorage.setItem("loggedUserId",JSON.stringify(this._sharedService.users[index].id));
+      localStorage.setItem("loggedUserEmail",this._sharedService.users[index].email);
+      localStorage.setItem("loggedUserPassword",this._sharedService.users[index].password);
       this._sharedService.loggedUserId=this._sharedService.users[index].id;
       this._router.navigateByUrl('/home');
     }

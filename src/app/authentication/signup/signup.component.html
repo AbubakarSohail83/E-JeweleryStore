@@ -1,7 +1,7 @@
-<div    style="max-width: 25%; padding: 1%;min-width: 300px;color: white;" class=" border border-2 border-secondary  rounded  justify-content-center align-items-center mx-auto mt-5 pb-3 pt-3 parent">
-        <div   class="container pt-5 p-3 text-center">
+<div    style="max-width: 25%; padding: 1%;min-width: 300px;color: white;" class=" border border-2 border-secondary  rounded  justify-content-center align-items-center mx-auto mt-3  parent">
+        <div   class="container  p-3 text-center">
 
-    <h1 class="mb-5">Signup</h1>
+    <h1 class="mb-3">Signup</h1>
     <form #signupForm="ngForm" (ngSubmit)="onSubmit()" class="form-group" >
         <label for="name" style="float:left;">Name</label><br>
         <input class="inputField" placeholder="Name" name="userName" type="text" required="true" [(ngModel)]="user.name">
@@ -15,9 +15,9 @@
         <label for="confirmPassword" style="float:left;">Confirm Password</label><br>
         <input class=" inputField" placeholder="New Password Again" name="userPassword" type="password" required="true" [(ngModel)]="user.password">
 
-        <div class="d-flex mt-3 justify-content-center text-center">
-            <label for="submit"></label><br>
-            <input class=" btn btn-secondary" type="submit" required="true">
+        <div class="row  justify-content-center text-center">
+            <label for="submit"></label>
+            <input class=" btn btn-secondary h-25 w-50" type="submit" required="true">
 
             <div class="container ms-20">
                 <p>Already have an account?</p>

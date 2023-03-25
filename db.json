@@ -64,11 +64,6 @@
       "categoryName": "Artificial",
       "createdOn": "2023-03-20T16:19:41.247Z",
       "id": 17
-    },
-    {
-      "categoryName": "This is Abc Category",
-      "createdOn": "2023-03-24T09:29:04.552Z",
-      "id": 18
     }
   ],
   "Users": [
@@ -79,6 +74,22 @@
     {
       "name": "xyz",
       "id": 2
+    },
+    {
+      "name": "xyz",
+      "id": 3
+    },
+    {
+      "name": "xyz",
+      "email": "ymh",
+      "password": "ymh",
+      "id": 4
+    },
+    {
+      "name": "xyz",
+      "email": "llk",
+      "password": "mknkn",
+      "id": 5
     }
   ]
 }

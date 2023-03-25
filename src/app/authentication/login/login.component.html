@@ -1,9 +1,9 @@
 <div    style="max-width: 25%; min-width: 300px; color: white;" class="d-flex border border-2 border-secondary parent rounded  justify-content-center align-items-center mx-auto mt-5 pb-3 pt-3 ">
-    <div   class="container pt-5 p-3 text-center ">
+    <div   class="container  p-3 text-center ">
         <h1 class="text-center">Login Here</h1><br>
         <form  #loginForm="ngForm" (ngSubmit)="onLogin()" class="form-group justify-content-center align-items-center ">
             <label for ="Email"  style="float: left;" class="labels">Email</label><br>
-            <input name="Email" class="inputField"  placeholder="Email" required="true" type="email"  name="userEmail" [(ngModel)]="user.email" />
+            <input name="Email" class="inputField" [value]="" placeholder="Email" required="true" type="email"  name="userEmail" [(ngModel)]="user.email" />
 
             <label for="Password" style="float: left;" class="labels">Password</label><br>
             <input name="Password" class="inputField" placeholder="Password" required="true" type="password" name="userPassword"  [(ngModel)]="user.password"/>

@@ -21,7 +21,10 @@ export class LoginComponent {
   }
 
   ngOnInit() {
+  
     this.user=new User();  
+    this.getUsers();
+   
   };
     
 
@@ -34,9 +37,19 @@ export class LoginComponent {
 
   onLogin()
   {
-    this._sharedService.users.findIndex(x=>{
-      x.email==this.user.email;
+    let index= this._sharedService.users.findIndex(x=>{
+      return x.email==this.user.email && x.password== this.user.password;
     })
+    if(index==-1)
+    {
+      alert("Invalid Email or Password!");
+    }
+    else{
+      localStorage.clear();
+      localStorage.setItem(this._sharedService.users[index].email,this._sharedService.users[index].password);
+      this._sharedService.loggedUserId=this._sharedService.users[index].id;
+      this._router.navigateByUrl('/home');
+    }
   }
 
   onnaviagteto(id:number)

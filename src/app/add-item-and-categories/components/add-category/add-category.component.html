@@ -4,7 +4,8 @@
         <div class="form -group">
         <label>Category Name(20 characters max): {{addCategory.id}} </label>
         <input type="text" maxlength="20" minlength="5" #categoryName="ngModel" required name="CategoryName" [(ngModel)]="addCategory.categoryName" class="form-control" [class.is-invalid]="categoryName.touched && categoryName.invalid"> 
-       </div>
+            <small [class.d-none]="categoryName.valid || categoryName.untouched" style="color:red; font-style: italic;">Category Name must be entered</small>
+    </div>
       
        <button class="btn-primary mt-3" type="submit" >{{addCategory.id == undefined ? 'Submit':'Update'}} </button>
     </form>

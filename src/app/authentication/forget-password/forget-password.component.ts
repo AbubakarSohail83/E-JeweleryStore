@@ -78,6 +78,8 @@ export class ForgetPasswordComponent {
 
     this._httpService.putUser(this.user).subscribe(x=>{
       alert("Password Changed Successfully! Go to login page.");
+      this._router.navigateByUrl('/auth/login');
+      this._sharedService.userLoggedIn=false;
       
     })
   }

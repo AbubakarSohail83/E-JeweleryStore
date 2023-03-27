@@ -15,10 +15,10 @@
             <a class="nav-link " href="#" tabindex="-1" routerLink="/pm1/showItems">Show Items</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" routerLink="/add">Add Category</a>
+            <a class="nav-link " [class.d-none]="!_sharedService.userLoggedIn" href="#" tabindex="-1" routerLink="/add">Add Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" routerLink="/add/item">Add Item</a>
+            <a class="nav-link " [class.d-none]="!_sharedService.userLoggedIn" href="#" tabindex="-1" routerLink="/add/item">Add Item</a>
           </li>
         </ul>
         <ul class="navbar-nav  mb-2 mb-lg-0 d-flex" >

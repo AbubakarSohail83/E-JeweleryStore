@@ -23,7 +23,7 @@ export class NavbarComponent {
   {
     console.log(this._sharedService.loggedUserId);
 
-    if(this._sharedService.loggedUserId==undefined )
+    if(this._sharedService.userLoggedIn==false )
     {
       this._sharedService.userLoggedIn=false;
     }

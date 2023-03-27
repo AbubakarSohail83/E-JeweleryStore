@@ -5,7 +5,7 @@ import { User } from '../models/User';
 
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root' /*The @Injectable decorator is used to mark the class as a service that can be injected into other components. The providedIn: 'root' option specifies that the service should be provided at the root level of the application, making it a singleton.*/
 })
 export class SharedService {
   
@@ -14,7 +14,7 @@ export class SharedService {
   loggedUser:User;
   users:Array<User>;
   loggedUserId:number;
-
+  userLoggedIn:boolean;
 
 constructor() {
   this.loggedUser=new User();
@@ -22,7 +22,13 @@ constructor() {
   const loggedUserIdString = localStorage.getItem("loggedUserId");
   if (loggedUserIdString && loggedUserIdString !== "undefined") {
     this.loggedUserId = JSON.parse(loggedUserIdString);
+    this.userLoggedIn=true;
   }
+  else{
+    this.userLoggedIn=false;
+  }
+
+ 
 
   const loggedUserEmailString = localStorage.getItem("loggedUserEmail");
   if (loggedUserEmailString && loggedUserEmailString !== "undefined") {

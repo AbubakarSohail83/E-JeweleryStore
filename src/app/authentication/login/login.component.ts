@@ -51,6 +51,7 @@ export class LoginComponent {
       localStorage.setItem("loggedUserEmail",this._sharedService.users[index].email);
       localStorage.setItem("loggedUserPassword",this._sharedService.users[index].password);
       this._sharedService.loggedUserId=this._sharedService.users[index].id;
+      this._sharedService.userLoggedIn=true;
       this._router.navigateByUrl('/home');
     }
   }

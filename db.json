@@ -1,12 +1,6 @@
 {
   "Item": [
     {
-      "name": "lklk",
-      "price": 211,
-      "category": "Stones",
-      "id": 1
-    },
-    {
       "name": "Test item",
       "price": 545485,
       "category": "Artificial",
@@ -82,7 +76,7 @@
     {
       "email": "ymh",
       "id": 4,
-      "password": "ppp"
+      "password": "ymh"
     },
     {
       "name": "xyz",
@@ -97,6 +91,10 @@
     {
       "name": "ymh",
       "id": 7
+    },
+    {
+      "name": "ymh",
+      "id": 8
     }
   ]
 }

@@ -19,7 +19,7 @@ h1,h2{
 .bodyClass{
     background-image:url("F:\Angular PRactice\practice\src\assets\pictures\mainBack].jpg")  ;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
 

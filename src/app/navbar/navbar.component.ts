@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { toInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
+import { User } from '../models/User';
 import { SharedService } from '../services/shared.service';
 
 @Component({
@@ -9,10 +10,8 @@ import { SharedService } from '../services/shared.service';
 })
 export class NavbarComponent {
   
-  userLoggedIn:boolean;
-
+  
   constructor(public _sharedService:SharedService){
-
   }
 
   ngOnInit()
@@ -22,19 +21,22 @@ export class NavbarComponent {
 
   login()
   {
-    if(this._sharedService.loggedUserId==undefined)
+    console.log(this._sharedService.loggedUserId);
+
+    if(this._sharedService.loggedUserId==undefined )
     {
-      this.userLoggedIn=false;
+      this._sharedService.userLoggedIn=false;
     }
     else{
-      this.userLoggedIn=true;
+      this._sharedService.userLoggedIn=true;
     }
   }
 
   logout(){
    
     localStorage.clear();
-    this.userLoggedIn=false;
-
+    this._sharedService.userLoggedIn=false;
+ 
+    
   }
 }

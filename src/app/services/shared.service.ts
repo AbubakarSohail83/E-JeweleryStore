@@ -15,7 +15,7 @@ export class SharedService {
   users:Array<User>;
   loggedUserId:number;
   userLoggedIn:boolean;
-  searchData:any;
+  filterCategoryText:any;
 
 constructor() {
   this.loggedUser=new User();

@@ -1,6 +1,6 @@
 <div class="container m-5 "  >
 <div class="row d-flex flex-wrap">
-    <div *ngFor="let item of items;" class="col-lg-3 col-md-4">
+    <div *ngFor="let item of items | itemFilter : sharedS.filterCategoryText ;" class="col-lg-3 col-md-4">
         
             <div class="card my-3" >
                 <h1 class="card-title" style="color:white;" >{{item.name}}</h1><br><br>

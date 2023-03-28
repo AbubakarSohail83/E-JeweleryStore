@@ -10,12 +10,12 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
 @NgModule({
   declarations: [
     AddItemComponent,
     AddCategoryComponent,
     AddItemCategoryDashboardComponent,
- 
   ],
   imports: [
     CommonModule,

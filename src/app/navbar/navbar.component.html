@@ -12,7 +12,7 @@
          
           
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" routerLink="/pm1/showItems">Show Items</a>
+            <a class="nav-link " href="#" tabindex="-1" routerLink="/pm1/showItems">Categories</a>
           </li>
           <li class="nav-item">
             <a class="nav-link " [class.d-none]="!_sharedService.userLoggedIn" href="#" tabindex="-1" routerLink="/add">Add Category</a>
@@ -24,7 +24,7 @@
         <ul class="navbar-nav  mb-2 mb-lg-0 d-flex" >
     
             <li class="nav-item my-auto">
-                <input type="text" placeholder="Search Categories Here" [class.d-none]="!_sharedService.userLoggedIn" >
+                <input type="text" placeholder="Search" [class.d-none]="!_sharedService.userLoggedIn" [(ngModel)]="_sharedService.filterCategoryText">
             </li>
   
           <li class="nav-item">

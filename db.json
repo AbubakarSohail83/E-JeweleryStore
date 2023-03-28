@@ -19,28 +19,34 @@
       "id": 4
     },
     {
-      "name": "this is another test",
+      "name": "dfg",
       "price": 2312102121,
       "category": "GoldPlated",
       "id": 5
     },
     {
-      "name": "this is another test",
-      "price": 2312102121,
-      "category": "GoldPlated",
-      "id": 6
-    },
-    {
-      "name": "this is another test",
-      "price": 2312102121,
+      "name": "kljglorg",
+      "price": 321354654,
       "category": "GoldPlated",
       "id": 7
     },
     {
-      "name": "this is another test",
-      "price": 2312102121,
+      "name": "yopyo",
+      "price": 323,
       "category": "GoldPlated",
       "id": 8
+    },
+    {
+      "name": "asd",
+      "price": 3232,
+      "category": "Gold2",
+      "id": 9
+    },
+    {
+      "name": "abc def",
+      "price": 2231213,
+      "category": "Gold2",
+      "id": 10
     }
   ],
   "Category": [
@@ -58,6 +64,11 @@
       "categoryName": "Artificial",
       "createdOn": "2023-03-20T16:19:41.247Z",
       "id": 17
+    },
+    {
+      "categoryName": "Gold2",
+      "createdOn": "2023-03-28T09:42:01.039Z",
+      "id": 18
     }
   ],
   "Users": [

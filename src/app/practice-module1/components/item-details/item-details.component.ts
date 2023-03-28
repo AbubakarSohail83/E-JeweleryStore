@@ -18,6 +18,7 @@ export class ItemDetailsComponent {
 
   ngOnInit() {
 
+    this.sharedS.filterCategoryText="";
 
    
 

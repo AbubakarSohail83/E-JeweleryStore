@@ -6,6 +6,8 @@ import { ShowListOfItemsComponent } from './components/show-list-of-items/show-l
 import { Pm1DashboardComponent } from './components/pm1-dashboard/pm1-dashboard.component';
 import { ItemCompComponent } from './components/item-comp/item-comp.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
+import { FilterPipe } from '../Pipes/filter.pipe';
+import { ItemFilterPipe } from '../Pipes/item-filter.pipe';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
     ShowListOfItemsComponent,
     Pm1DashboardComponent,
     ItemCompComponent,
-    ItemDetailsComponent
+    ItemDetailsComponent,
+    FilterPipe,
+    ItemFilterPipe
   ],
   imports: [
     CommonModule,

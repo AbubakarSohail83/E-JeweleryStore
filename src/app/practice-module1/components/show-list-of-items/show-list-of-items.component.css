@@ -1,9 +1,12 @@
 div.card:hover{
-    transform:translateY(10px);
+    
+    transform:perspective(400px) translateZ(-30px);
 }
 *{
     text-align: center;
 }
 .card{
     border:groove 3px rgba(169, 169, 169, 0.638);
+    max-width: 400px;
+    max-height: min-content;
 }

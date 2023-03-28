@@ -37,6 +37,12 @@ export class ShowListOfItemsComponent {
   {
     this.getItems();
     this.getCategories();
+
+  }
+  ngOnDestroy(){
+    this._sharedservice.filterCategoryText="";
+    console.log("showItems destructor called");
+
   }
 
   getItems(){
@@ -53,6 +59,7 @@ export class ShowListOfItemsComponent {
 
   ItemCategoryClicked(category:Category)
   {
+    this._sharedservice.filterCategoryText="";
     let itemsToShow:Array<Item>=[];
     this._sharedservice.items.forEach(x =>{
       if(x.category == category.categoryName)

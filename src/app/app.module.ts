@@ -15,6 +15,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AddItemAndCategoriesModule } from './add-item-and-categories/add-item-and-categories.module';
 import { FormsModule } from '@angular/forms';
 import { UpdateCategoryComponent } from './src/app/add-item-and-categories/components/update-category/update-category.component';
+import { FilterPipe } from './Pipes/filter.pipe';
+
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { UpdateCategoryComponent } from './src/app/add-item-and-categories/compo
     NavbarComponent,
     PageNotFoundComponent,
     UpdateCategoryComponent,
+    FilterPipe
 
    ],
   imports: [

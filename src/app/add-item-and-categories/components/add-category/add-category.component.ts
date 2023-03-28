@@ -5,6 +5,7 @@ import { HttpServiceService } from 'src/app/services/http-service.service';
 import { SharedService } from 'src/app/services/shared.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { FilterPipe } from 'src/app/Pipes/filter.pipe';
 
 @Component({
   selector: 'app-add-category',
@@ -12,7 +13,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-category.component.css']
 })
 export class AddCategoryComponent {
-  public addCategory:Category;
+   addCategory:Category;
+
   
   constructor(private _httpService:HttpServiceService, public _sharedservice:SharedService, private router:Router){
   

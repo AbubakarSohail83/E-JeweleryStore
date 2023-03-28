@@ -22,6 +22,11 @@
           </li>
         </ul>
         <ul class="navbar-nav  mb-2 mb-lg-0 d-flex" >
+    
+            <li class="nav-item my-auto">
+                <input type="text" placeholder="Search Categories Here" [class.d-none]="!_sharedService.userLoggedIn" >
+            </li>
+  
           <li class="nav-item">
             <a class="nav-link" [class.d-none]="_sharedService.userLoggedIn" routerLink="/auth/login" (click)="login()">Login</a>
           </li>

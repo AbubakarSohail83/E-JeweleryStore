@@ -16,6 +16,7 @@ import { AddItemAndCategoriesModule } from './add-item-and-categories/add-item-a
 import { FormsModule } from '@angular/forms';
 import { UpdateCategoryComponent } from './src/app/add-item-and-categories/components/update-category/update-category.component';
 import { ItemFilterPipe } from './Pipes/item-filter.pipe';
+import { SortArraysPipe } from './Pipes/sort-arrays.pipe';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { ItemFilterPipe } from './Pipes/item-filter.pipe';
     NavbarComponent,
     PageNotFoundComponent,
     UpdateCategoryComponent,
+    SortArraysPipe,
 
     
 

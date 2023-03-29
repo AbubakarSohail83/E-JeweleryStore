@@ -8,7 +8,7 @@
     },
     {
       "name": "test Item",
-      "price": 545485656565,
+      "price": 5,
       "category": "GoldPlated",
       "id": 3
     },
@@ -19,20 +19,20 @@
       "id": 4
     },
     {
-      "name": "dfg",
-      "price": 2312102121,
+      "name": "lplp",
+      "price": 1,
       "category": "GoldPlated",
       "id": 5
     },
     {
       "name": "kljglorg",
-      "price": 321354654,
+      "price": 3,
       "category": "GoldPlated",
       "id": 7
     },
     {
       "name": "yopyo",
-      "price": 323,
+      "price": 2,
       "category": "GoldPlated",
       "id": 8
     },
@@ -73,18 +73,6 @@
   ],
   "Users": [
     {
-      "name": "xyz",
-      "id": 1
-    },
-    {
-      "name": "xyz",
-      "id": 2
-    },
-    {
-      "name": "xyz",
-      "id": 3
-    },
-    {
       "email": "ymh",
       "id": 4,
       "password": "ymh"
@@ -94,18 +82,6 @@
       "email": "llk",
       "password": "mknkn",
       "id": 5
-    },
-    {
-      "name": "ymh",
-      "id": 6
-    },
-    {
-      "name": "ymh",
-      "id": 7
-    },
-    {
-      "name": "ymh",
-      "id": 8
     },
     {
       "name": "xyz",

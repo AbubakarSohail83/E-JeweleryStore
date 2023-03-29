@@ -5,8 +5,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class SortArraysPipe implements PipeTransform {
 
-  transform(value: Array<any>, ...args:any):any {
-    return value.sort((a,b)=>{
+  transform(value: any, args? :any):any {
+    return value.sort((a:any,b:any)=>{
      let x=a.price;
      let y=b.price;
      if (x<y) {

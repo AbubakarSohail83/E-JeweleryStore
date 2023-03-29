@@ -8,6 +8,8 @@ import { ItemCompComponent } from './components/item-comp/item-comp.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { FilterPipe } from '../Pipes/filter.pipe';
 import { ItemFilterPipe } from '../Pipes/item-filter.pipe';
+import { SortArraysPipe } from '../Pipes/sort-arrays.pipe';
+
 
 
 @NgModule({
@@ -17,7 +19,8 @@ import { ItemFilterPipe } from '../Pipes/item-filter.pipe';
     ItemCompComponent,
     ItemDetailsComponent,
     FilterPipe,
-    ItemFilterPipe
+    ItemFilterPipe,
+    SortArraysPipe
   ],
   imports: [
     CommonModule,

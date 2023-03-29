@@ -1,6 +1,6 @@
 <div class="container  mx-auto my-auto"  >
 <div class="row d-flex flex-wrap mx-auto" >
-    <div *ngFor="let item of items | itemFilter : sharedS.filterCategoryText ;" class="col-lg-3 px-auto mx-auto col-md-4">
+    <div *ngFor="let item of items | sortArrays | itemFilter : sharedS.filterCategoryText ;" class="col-lg-3 px-auto mx-auto col-md-4">
         
             <div class="card my-3 mx-auto" >
                 <h1 class="card-title" style="color:white;" >{{item.name}}</h1><br><br>

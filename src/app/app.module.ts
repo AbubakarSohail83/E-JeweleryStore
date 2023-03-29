@@ -15,8 +15,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AddItemAndCategoriesModule } from './add-item-and-categories/add-item-and-categories.module';
 import { FormsModule } from '@angular/forms';
 import { UpdateCategoryComponent } from './src/app/add-item-and-categories/components/update-category/update-category.component';
-import { ItemFilterPipe } from './Pipes/item-filter.pipe';
-import { SortArraysPipe } from './Pipes/sort-arrays.pipe';
+import { AppHighlightDirective } from './Directives/app-highlight.directive';
+
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { SortArraysPipe } from './Pipes/sort-arrays.pipe';
     NavbarComponent,
     PageNotFoundComponent,
     UpdateCategoryComponent,
-    SortArraysPipe,
+    AppHighlightDirective,
 
     
 

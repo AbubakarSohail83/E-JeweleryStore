@@ -5,7 +5,7 @@ import { Directive ,ElementRef, HostListener, Input} from '@angular/core';
 })
 export class AppHighlightDirective {
 
-  @Input() appHighLight='';
+  @Input('appAppHighlight') appHighLight='';
   constructor(private el:ElementRef) 
   {
   }

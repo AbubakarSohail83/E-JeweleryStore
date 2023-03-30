@@ -1,10 +1,14 @@
 <div class="container mt-5 .align-items-center .justify-content-center" style="align-items: center; text-align: center; color:white;">
-    <h1 appAppHighlight [appHighLight]="color">
+    <h1  [appAppHighlight]="color" style="width: fit-content;" class="mx-auto">
         XYZ Jewels
     </h1><br><br>
-    <p>Unleash the radiance within you with our exquisite collection of fine jewelry.</p>
+    <p >Unleash the radiance within you with our exquisite collection of fine jewelry.</p>
 
-    <!-- <div class="row justify-content-center align-center">
+    <button class="btn btn-lg btn-primary" (click)="toggleCarousel()">Toggle Carousel</button>
+</div>
+
+    <div *appIfFalse='isAvailable' class="row justify-content-center align-center">
+
       <div class="col-lg-11 ">
           <div class="carousel slide" data-ride="carousel" id="mySlider">
               <ul class="carousel-indicators">
@@ -40,5 +44,5 @@
  
           </div>
 
-      </div> -->
+      </div>
 </div>

@@ -16,6 +16,7 @@ import { AddItemAndCategoriesModule } from './add-item-and-categories/add-item-a
 import { FormsModule } from '@angular/forms';
 import { UpdateCategoryComponent } from './src/app/add-item-and-categories/components/update-category/update-category.component';
 import { AppHighlightDirective } from './Directives/app-highlight.directive';
+import { IfFalseDirective } from './Directives/if-false.directive';
 
 
 
@@ -27,6 +28,7 @@ import { AppHighlightDirective } from './Directives/app-highlight.directive';
     PageNotFoundComponent,
     UpdateCategoryComponent,
     AppHighlightDirective,
+    IfFalseDirective,
 
     
 

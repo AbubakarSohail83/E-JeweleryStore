@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  color:'yellow';
-
+  color:string='black';
+  public isAvailable:boolean;
+  constructor(){}
+  toggleCarousel(){
+    console.log("function toggle called!");
+    this.isAvailable=!this.isAvailable;
+  }
  }

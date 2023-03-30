@@ -10,3 +10,8 @@ div.card:hover{
     max-width: 400px;
     max-height: min-content;
 }
+
+.colorGray{
+    background-color: black;
+    color:white;
+}

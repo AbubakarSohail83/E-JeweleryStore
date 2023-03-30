@@ -8,6 +8,7 @@ class Item {
   name : String;
   price:number;
   category: String;
+ 
 
   constructor(nameParam:String,priceParam:number,categoryParam:String)
   {

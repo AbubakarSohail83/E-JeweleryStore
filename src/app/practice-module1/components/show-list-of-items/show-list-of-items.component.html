@@ -6,7 +6,7 @@
         <div class="card mx-auto" (click)="ItemCategoryClicked(itemCategory)">
           <img [src]="itemCategoryPics[i]" class="card-img-top w-100" style="height: 300px; object-fit: cover;">
           <h3 class="card-title"  appSearchHighlight [searchedWord]="_sharedservice.filterCategoryText" [content]="itemCategory.categoryName"  
-          [classToApply]="'font-weight-bold'" [setTitle]="true">{{itemCategory.categoryName}}</h3>
+          [classToApply]="'colorGray'" [setTitle]="true">{{itemCategory.categoryName}}</h3>
           <div></div>
 
           

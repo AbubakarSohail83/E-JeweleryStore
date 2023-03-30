@@ -9,6 +9,7 @@ import { ItemDetailsComponent } from './components/item-details/item-details.com
 import { FilterPipe } from '../Pipes/filter.pipe';
 import { ItemFilterPipe } from '../Pipes/item-filter.pipe';
 import { SortArraysPipe } from '../Pipes/sort-arrays.pipe';
+import { SearchHighlightDirective } from '../Directives/search-highlight.directive';
 
 
 
@@ -20,7 +21,8 @@ import { SortArraysPipe } from '../Pipes/sort-arrays.pipe';
     ItemDetailsComponent,
     FilterPipe,
     ItemFilterPipe,
-    SortArraysPipe
+    SortArraysPipe,
+    SearchHighlightDirective
   ],
   imports: [
     CommonModule,

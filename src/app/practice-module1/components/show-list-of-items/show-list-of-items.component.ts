@@ -37,7 +37,7 @@ export class ShowListOfItemsComponent {
   {
     this.getItems();
     this.getCategories();
-
+    this._sharedservice.filterCategoryText="";
   }
   ngOnDestroy(){
     this._sharedservice.filterCategoryText="";

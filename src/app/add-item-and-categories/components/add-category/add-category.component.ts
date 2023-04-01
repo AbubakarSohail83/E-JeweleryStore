@@ -33,7 +33,9 @@ export class AddCategoryComponent {
     this._httpService.getCategories().subscribe(x =>{
  
       this._sharedservice.categories=x;
-    })}
+    })
+
+}
   
   saveCategory(){
     var date=new Date();
@@ -41,6 +43,7 @@ export class AddCategoryComponent {
     this._httpService.addCategory(this.addCategory).subscribe(x=>{
       this._sharedservice.categories.push(this.addCategory);
       alert("Category added successfully!");
+
     });
   }
 
@@ -62,13 +65,13 @@ export class AddCategoryComponent {
 
 
   onUpdateCategory(){
-    console.log(this.addCategory.id);
+    console.log(this.addCategory);
     this._httpService.putCategories(this.addCategory).subscribe(x=>{
      alert("Put Method Worked!");
       var idx=this._sharedservice.categories.findIndex(x=>x.id==this.addCategory.id);
-
       this._sharedservice.categories[idx]=this.addCategory;
-    });
+    })
+    this.addCategory=new Category();
   }
 
   checkValidation()

@@ -47,13 +47,22 @@
       "price": 2231213,
       "category": "Gold2",
       "id": 10
+    },
+    {
+      "name": "Test item",
+      "price": 2,
+      "category": "tyutyu",
+      "id": 11
     }
   ],
   "Category": [
     {
-      "categoryName": "Stones",
-      "createdOn": "2023-03-18T06:40:57.642Z",
-      "id": 4
+      "id": 4,
+      "categoryName": "Another Category",
+      "createdOn": "2023-04-01T00:00:00",
+      "createdBy": null,
+      "modifiedOn": "2023-04-01T00:00:00",
+      "modifedBy": null
     },
     {
       "categoryName": "GoldPlated",

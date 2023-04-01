@@ -26,7 +26,7 @@ class Item {
   styleUrls: ['./show-list-of-items.component.css']
 })
 export class ShowListOfItemsComponent {
-  itemCategories:Array<Category>;
+
   itemCategoryPics=["assets/pictures/download (1).jpeg","assets/pictures/download (2).jpeg","assets/pictures/download.jpeg"];
   title:string;
 
@@ -49,14 +49,21 @@ export class ShowListOfItemsComponent {
   getItems(){
     this.http.getItems().subscribe(x =>{
       console.log(x);
+      
       this._sharedservice.items=x;
-    })}
+      
+    })
+
+  }
 
     getCategories(){
+
       this.http.getCategories().subscribe(x =>{
-        console.log(x);
+
         this._sharedservice.categories=x;
-      })}
+        console.log(this._sharedservice.categories);
+      })
+    }
 
   ItemCategoryClicked(category:Category)
   {

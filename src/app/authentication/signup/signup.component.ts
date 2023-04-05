@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/User';
 import { HttpServiceService } from 'src/app/services/http-service.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-signup',
@@ -29,6 +30,12 @@ ngOnInit()
 
     }
     
+  }
+
+  
+  checkValidation()
+  {
+    alert("Input field required");
   }
 
   onSubmit()

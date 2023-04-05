@@ -78,17 +78,19 @@ export class HttpServiceService {
 
   addUser(user:User):Observable<any>
   {
-    const url='http://localhost:3000/Users/';  
+    //const url='http://localhost:3000/Users/'; 
+    const url="https://localhost:44378/api/AddUser";
     return this.http.post<any>(url,user);
   }
 
   getUser(): Observable<any> {
-    const url = 'http://localhost:3000/Users';
+    const url = 'https://localhost:44378/api/GetUsers';
     return this.http.get<any>(url);
   }
 
   putUser(user:User):Observable<any>{
-    const url = 'http://localhost:3000/Users';
+    //const url = 'http://localhost:3000/Users';
+    const url = 'https://localhost:44378/api/PutUser';
     const _url = `${url}/${user.id}`;
     return this.http.put<any>(_url,user);
   }

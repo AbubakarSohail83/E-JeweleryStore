@@ -1,0 +1,15 @@
+.navbar .navbar-brand{
+    color:goldenrod;
+    font-weight: 400 px;
+}
+
+.navbar-toggler{
+    border: solid  goldenrod  2px;
+}
+
+
+.collapse .navbar-collapse{
+    text-align: center;
+    justify-content: center;
+    align-items: center ;
+}

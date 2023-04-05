@@ -2,9 +2,9 @@
         <div   class="container  p-3 text-center">
 
     <h1 class="mb-3">Signup</h1>
-    <form #signupForm="ngForm" (ngSubmit)="onSubmit()" class="form-group" >
+    <form #signupForm="ngForm" (ngSubmit)="signupForm.valid? onSubmit():checkValidation()" class="form-group" >
         <label for="name" style="float:left;">Name</label><br>
-        <input class="inputField" placeholder="Name" name="userName" type="text" required="true" [(ngModel)]="user.name">
+        <input class="inputField form-control" placeholder="Name"  name="userName" type="text" required="true" [(ngModel)]="user.name" >
 
         <label for="Email" style="float:left;">Email</label><br>
         <input class=" inputField" placeholder="Email" name="email" type="email" required="true" [(ngModel)]="user.email">

@@ -31,6 +31,12 @@ export class HttpServiceService {
     return this.http.post<any>(url,category);
   }
   
+  getItemsOnCategory(categoryName:string):Observable<any>
+  {
+    const url = 'https://localhost:44378/api/GetItemsWithCategory';
+    const _url = `${url}/${categoryName}`;
+    return this.http.get<any>(_url);
+  }
    
 
   getCategories(): Observable<any> {

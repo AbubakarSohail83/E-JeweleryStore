@@ -29,6 +29,7 @@ export class ShowListOfItemsComponent {
 
   itemCategoryPics=["assets/pictures/download (1).jpeg","assets/pictures/download (2).jpeg","assets/pictures/download.jpeg"];
   title:string;
+   itemsToShow:Array<Item>=[];
 
   constructor(private router: Router, public _sharedservice:SharedService, public http:HttpServiceService){
     
@@ -68,24 +69,14 @@ export class ShowListOfItemsComponent {
   ItemCategoryClicked(category:Category)
   {
     this._sharedservice.filterCategoryText="";
-    let itemsToShow:Array<Item>=[];
-    this._sharedservice.items.forEach(x =>{
-      if(x.category == category.categoryName)
-        {itemsToShow.push(x);}
-
+    this.http.getItemsOnCategory(category.categoryName).subscribe(x=>{
+      this.itemsToShow=x;
+      console.log(x);
+      console.log(this.itemsToShow);
+      let itemsString=JSON.stringify(this.itemsToShow);
+      this.router.navigate(['/pm1/items',itemsString ]);  
     })
-    // for(let i=0;i<this._sharedservice.items.length;i++)
-    // {
-    //   if(this._sharedservice.items[i].category==category)
-    //     itemsToShow.push(this._sharedservice.items[i]);
-    // }
-    let itemsString=JSON.stringify(itemsToShow);
-    this.router.navigate(['/pm1/items',itemsString ]);  //
-  }
 
+  }     
 
-  // onNotified(message:string)
-  // {
-  //   this.title=message;
-  // }
 }

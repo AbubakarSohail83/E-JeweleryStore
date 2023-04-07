@@ -2,12 +2,12 @@
 <div class="row d-flex flex-wrap mx-auto" >
     <div *ngFor="let item of items | sortArrays | itemFilter : sharedS.filterCategoryText ;" class="col-lg-3 px-auto mx-auto col-md-4">
         
-            <div class="card my-3 mx-auto" >
-                <h1 class="card-title" style="color:white;" >{{item.name}}</h1><br><br>
+            <div class="card my-3 mx-auto px-0" >
+                <h1 class="card-title"  >{{item.name}}</h1><br><br>
                 <div class="card-block" >
                     <h4>{{item.price}} Rs.</h4>
                 </div>
-                <button type="button" class="ms-5 me-5 btn btn-secondary ">Add To Cart</button>
+                <button type="button" class=" btn btn-secondary ">Add To Cart</button>
             </div>
         
     </div>

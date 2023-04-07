@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Category } from 'src/app/models/Category';
 import { HttpServiceService } from 'src/app/services/http-service.service';
 import { SharedService } from 'src/app/services/shared.service';
+import { SharedModuleModule } from 'src/app/shared-module/shared-module.module';
 
 class Item {
   name : String;

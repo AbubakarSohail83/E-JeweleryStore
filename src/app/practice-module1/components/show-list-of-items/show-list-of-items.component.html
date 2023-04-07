@@ -2,7 +2,7 @@
 
 <div class="container mt-5">
     <div class="row d-flex flex-wrap mx-auto">
-      <div *ngFor="let itemCategory of _sharedservice.categories | filter: _sharedservice.filterCategoryText ; let i = index;" class="col-lg-4 col-md-6 mb-4">
+      <div *ngFor="let itemCategory of _sharedservice.categories | sortArrays | filter: _sharedservice.filterCategoryText ; let i = index;" class="col-lg-4 col-md-6 mb-4">
         <div class="card mx-auto" (click)="ItemCategoryClicked(itemCategory)">
           <img [src]="itemCategoryPics[i]" class="card-img-top w-100" style="height: 300px; object-fit: cover;">
           <h3 class="card-title"  appSearchHighlight [searchedWord]="_sharedservice.filterCategoryText" [content]="itemCategory.categoryName"  

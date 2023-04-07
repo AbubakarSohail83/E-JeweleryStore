@@ -7,10 +7,9 @@ import { Pm1DashboardComponent } from './components/pm1-dashboard/pm1-dashboard.
 import { ItemCompComponent } from './components/item-comp/item-comp.component';
 import { ItemDetailsComponent } from './components/item-details/item-details.component';
 import { FilterPipe } from '../Pipes/filter.pipe';
-import { ItemFilterPipe } from '../Pipes/item-filter.pipe';
-import { SortArraysPipe } from '../Pipes/sort-arrays.pipe';
 import { SearchHighlightDirective } from '../Directives/search-highlight.directive';
-
+import { ItemFilterModuleModule } from '../item-filter-module/item-filter-module.module';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 
 @NgModule({
@@ -18,15 +17,16 @@ import { SearchHighlightDirective } from '../Directives/search-highlight.directi
     ShowListOfItemsComponent,
     Pm1DashboardComponent,
     ItemCompComponent,
-    ItemDetailsComponent,
+    
     FilterPipe,
-    ItemFilterPipe,
-    SortArraysPipe,
+
     SearchHighlightDirective
   ],
   imports: [
     CommonModule,
-    PracticeModule1RoutingModule
+    PracticeModule1RoutingModule,
+    ItemFilterModuleModule,
+    SharedModuleModule
   ]
 })
 export class PracticeModule1Module { }
